@@ -32,6 +32,6 @@ COPY target/lib/* /deployments/lib/
 COPY target/*-runner.jar /deployments/quarkus-run.jar
 
 EXPOSE 8080
-USER 185
+USER root
 
 ENTRYPOINT [ "java", "-jar", "/deployments/quarkus-run.jar" ]

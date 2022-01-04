@@ -65,6 +65,10 @@
         <artifactId>quarkus-maven-plugin</artifactId>
         <version>${quarkus.platform.version}</version>
         <extensions>true</extensions>
+        <configuration>
+            <source>1.8</source>
+            <target>1.8</target>
+        </configuration>
         <executions>
           <execution>
             <goals>
@@ -81,7 +85,7 @@
         <configuration>
           <compilerArgs>
             <arg>-parameters</arg>
-          </compilerArgs>
+          </compilerArgs>          
         </configuration>
       </plugin>
       <plugin>
@@ -93,6 +97,11 @@
             <maven.home>${maven.home}</maven.home>
           </systemPropertyVariables>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.heroku.sdk</groupId>
+        <artifactId>heroku-maven-plugin</artifactId>
+        <version>3.0.3</version>
       </plugin>
     </plugins>
   </build>
